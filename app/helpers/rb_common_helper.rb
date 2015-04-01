@@ -245,6 +245,15 @@ filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,Start
     s.html_safe
   end
 
+  def tracker_options_for_select()
+    s = ''
+
+    (RbStory.trackers & @project.tracker_ids).each do |id|
+        s << "<option value=\"#{id}\" color=\"#AAAAAA\" color_light=\"#E0E0E0\">#{h Tracker.find_by_id(id).name}</option>"
+    end
+    s.html_safe
+  end
+
   def release_options_for_select(releases, selected=nil)
     grouped = Hash.new {|h,k| h[k] = []}
     selected = [selected].compact unless selected.kind_of?(Array)
