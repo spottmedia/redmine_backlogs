@@ -158,7 +158,7 @@ class RbStory < Issue
     attribs = Hash[*attribs.flatten]
     s = RbStory.new(attribs)
     s.save!
-    s.position!(params)
+    s.update_and_position!(params)
 
     return s
   end
