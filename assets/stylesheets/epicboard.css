@@ -1,27 +1,38 @@
+/* line 1, sass/epicboard.scss */
 #epicboard, #epicboard table {
   background-color: white;
   color: black;
 }
+
+/* line 5, sass/epicboard.scss */
 #epicboard .story {
-  color: black; 
+  color: black;
 }
+
+/* line 8, sass/epicboard.scss */
 #epicboard .issue .subject {
   white-space: normal;
 }
 
-#assigned_to_id_options{
-  display:none;
+/* line 12, sass/epicboard.scss */
+#assigned_to_id_options {
+  display: none;
 }
 
-#tracker_id_options{
-  display:none;
+/* line 16, sass/epicboard.scss */
+#tracker_id_options {
+  display: none;
 }
-#col_width{
-  margin-left:5px;
+
+/* line 19, sass/epicboard.scss */
+#col_width {
+  margin-left: 5px;
 }
-#col_width input{
-  text-align:right;
-  width:20px;
+
+/* line 22, sass/epicboard.scss */
+#col_width input {
+  text-align: right;
+  width: 20px;
 }
 
 /*
@@ -33,396 +44,524 @@ Also use by the Column Width preference to
 determine the unit width of the swimlanes.
 See RB.Taskboard.initialize()
 */
-.swimlane{
-  min-width:105px; /* width + (2*margin) + (2*padding) + (2*border) of .issue */
-  padding:5px;
-  width:105px; /* Must be the same as min-width */
+/* line 36, sass/epicboard.scss */
+.swimlane {
+  min-width: 105px;
+  /* width + (2*margin) + (2*padding) + (2*border) of .issue */
+  padding: 5px;
+  width: 105px;
+  /* Must be the same as min-width */
 }
 
-#epicboard { position: relative; } /*for fixed header*/
-#impediments { padding-top: 40px; }
+/* line 42, sass/epicboard.scss */
+#epicboard {
+  position: relative;
+}
+
+/*for fixed header*/
+/* line 43, sass/epicboard.scss */
+#impediments {
+  padding-top: 40px;
+}
+
 /* status labels */
-#board_header{
-  background-color:#EEEEEE;
-  border:1px solid #CCCCCC;
-  margin-bottom:0;
-  margin-right:10px;
+/* line 45, sass/epicboard.scss */
+#board_header {
+  background-color: #EEEEEE;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 0;
+  margin-right: 10px;
   position: absolute;
   z-index: 200;
 }
-#board_header td{
-  background-color:#EEEEEE;
+
+/* line 53, sass/epicboard.scss */
+#board_header td {
+  background-color: #EEEEEE;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#DDD));
   background: -moz-linear-gradient(top, #FFF, #DDD);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FFFFFF,EndColorStr=#DDDDDD);
-  border-right:1px dotted #CFCFCF;
-  color:#4E4E4E;
-  font-size:14px;
-  font-weight:bold;
-  height:30px;
-  text-align:center;
-  vertical-align:middle;
+  filter: progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FFFFFF,EndColorStr=#DDDDDD);
+  border-right: 1px dotted #CFCFCF;
+  color: #4E4E4E;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
 }
-#board_header td:last-child{
-  border-right:none;
+
+/* line 66, sass/epicboard.scss */
+#board_header td:last-child {
+  border-right: none;
 }
 
 /* shared #impediments and #storys */
-.board{
+/* line 71, sass/epicboard.scss */
+.board {
   /* background-color:#FCFCFC; */
-  border:1px solid #CCCCCC;
-  border-top:none;
-  margin-right:10px;
-}
-.board tr:hover{
-  /* background-color:#ffffff; */
-}
-.board td{
-  border-right:1px dotted #CFCFCF;
-  border-bottom:1px dotted #CFCFCF;
-  vertical-align:top;
+  border: 1px solid #CCCCCC;
+  border-top: none;
+  margin-right: 10px;
 }
 
+/* line 77, sass/epicboard.scss */
+.board tr:hover {
+  /* background-color:#ffffff; */
+}
+
+/* line 80, sass/epicboard.scss */
+.board td {
+  border-right: 1px dotted #CFCFCF;
+  border-bottom: 1px dotted #CFCFCF;
+  vertical-align: top;
+}
+
+/* line 86, sass/epicboard.scss */
 #board_header td:first-child,
-.board td:first-child{
-  min-width:210px;
-  padding:5px;
-  width:210px; 
+.board td:first-child {
+  min-width: 210px;
+  padding: 5px;
+  width: 210px;
 }
-.board td:last-child{
-  border-right:none;
+
+/* line 92, sass/epicboard.scss */
+.board td:last-child {
+  border-right: none;
 }
-.board tr:last-child td{
-  border-bottom:none;
+
+/* line 95, sass/epicboard.scss */
+.board tr:last-child td {
+  border-bottom: none;
 }
-.board .add_new{
+
+/* line 98, sass/epicboard.scss */
+.board .add_new {
   display: inline-block;
-  vertical-align:middle;
+  vertical-align: middle;
 }
-.board .add_new:hover{
-  cursor:pointer;
-  background-color:#ffffcc;
+
+/* line 102, sass/epicboard.scss */
+.board .add_new:hover {
+  cursor: pointer;
+  background-color: #ffffcc;
 }
+
+/* line 106, sass/epicboard.scss */
 .epic,
-.label_sprint_impediments{
+.label_sprint_impediments {
   -moz-box-shadow: 2px 2px 2px #CCCCCC;
-  -webkit-box-shadow: 2px 2px 2px #CCCCCC;;
-  box-shadow: 2px 2px 2px #CCCCCC;;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235));
+  -webkit-box-shadow: 2px 2px 2px #CCCCCC;
+  box-shadow: 2px 2px 2px #CCCCCC;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c9de96), color-stop(44%, #8ab66b), color-stop(100%, #398235));
   background: -moz-linear-gradient(top, color-stop(25%, green), color-stop(75%, green));
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=color-stop(25%, green),EndColorStr=color-stop(75%, green));
-  background-color:#F8F6A5;
-  border:none;
-  display:block;
-  float:left;
-  font-size:10px;
-  min-height:80px;
-  margin:5px;
-  padding:5px;
-  position:relative;
-  width:190px;
+  filter: progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=color-stop(25%, green),EndColorStr=color-stop(75%, green));
+  background-color: #F8F6A5;
+  border: none;
+  display: block;
+  float: left;
+  font-size: 10px;
+  min-height: 80px;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  width: 190px;
 }
-.epic .id{
-  -moz-border-radius:4px 4px 4px 4px;
-  -webkit-border-radius:4px 4px 4px 4px;
-  border-radius:4px 4px 4px 4px;
-  background-color:#FFFFFF;
-  font-size:.9em;
-  opacity:0.8;
-  overflow:hidden;
-  padding:1px 3px 1px 3px;
+
+/* line 125, sass/epicboard.scss */
+.epic .id {
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  background-color: #FFFFFF;
+  font-size: .9em;
+  opacity: 0.8;
+  overflow: hidden;
+  padding: 1px 3px 1px 3px;
   line-height: 14px;
 }
+
+/* line 136, sass/epicboard.scss */
 .epic .id a,
 .epic .id .remaininghours {
-  float:right;
+  float: right;
   margin-left: 4px;
 }
-.epic .id .assignee{
+
+/* line 141, sass/epicboard.scss */
+.epic .id .assignee {
   font-weight: bold;
 }
-.epic .subject{
-  height:63px;
-  line-height:13px;
-  margin-top:0;
-  overflow:hidden;
-  padding:2px;
-  width:186px;
+
+/* line 144, sass/epicboard.scss */
+.epic .subject {
+  height: 63px;
+  line-height: 13px;
+  margin-top: 0;
+  overflow: hidden;
+  padding: 2px;
+  width: 186px;
 }
+
+/* line 152, sass/epicboard.scss */
 .epic .project {
-  text-align:left;
+  text-align: left;
 }
+
+/* line 155, sass/epicboard.scss */
 .epic .id .v {
-  display:none;
+  display: none;
 }
-.epic.closed .subject{
-  text-decoration:line-through;
+
+/* line 158, sass/epicboard.scss */
+.epic.closed .subject {
+  text-decoration: line-through;
 }
-.epic .epic_points.editable{
-  -moz-border-radius:15px 15px 15px 15px;
-  -webkit-border-radius:15px 15px 15px 15px;
-  border-radius:15px 15px 15px 15px;
-  border:2px solid #FFFFFF;
-  background-color:#FF8800;
-  color:#FFFFFF;
-  position:absolute;
-  padding:1em;
-  bottom:-5px;
-  right:-5px;
+
+/* line 161, sass/epicboard.scss */
+.epic .epic_points.editable {
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
+  border: 2px solid #FFFFFF;
+  background-color: #FF8800;
+  color: #FFFFFF;
+  position: absolute;
+  padding: 1em;
+  bottom: -5px;
+  right: -5px;
 }
-.epic .epic_points.editable:empty{
-  display:none;
+
+/* line 173, sass/epicboard.scss */
+.epic .epic_points.editable:empty {
+  display: none;
 }
 
 /* item styles used by .story and .impediment */
-#epicboard .issue, #epicboard .placeholder{
-  background-color:#CCCCCC;
+/* line 178, sass/epicboard.scss */
+#epicboard .issue, #epicboard .placeholder {
+  background-color: #CCCCCC;
   background: -webkit-gradient(linear, left top, left bottom, from(#FEE), to(#FD2));
   background: -moz-linear-gradient(top, #FEE, #FD2);
-  filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FFEEEE,EndColorStr=#FFDD22);
-  border:none;
-  cursor:move;
-  display:block;
-  float:left;
-  font-size:10px;
-  height:80px;
-  margin:5px;
-  padding:5px;
-  position:relative;
-  width:85px;
+  filter: progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FFEEEE,EndColorStr=#FFDD22);
+  border: none;
+  cursor: move;
+  display: block;
+  float: left;
+  font-size: 10px;
+  height: 80px;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  width: 85px;
   line-height: 12px;
 }
-#epicboard .issue{
+
+/* line 195, sass/epicboard.scss */
+#epicboard .issue {
   -moz-box-shadow: 2px 2px 2px #CCCCCC;
   -webkit-box-shadow: 2px 2px 2px #CCCCCC;
   box-shadow: 2px 2px 2px #CCCCCC;
 }
-#epicboard .placeholder{
-  background-color:#FFFF00;
-  border:1px dashed #333300;
-  height:78px;
-  width:83px;
-}
-.issue .id{
-  -moz-border-radius:4px 4px 4px 4px;
-  -webkit-border-radius:4px 4px 4px 4px;
-  border-radius:4px 4px 4px 4px;
-  background-color:#FFFFFF;
-  font-size:9px;
-  height:12px;
-  opacity:0.5;
-  overflow:hidden;
-  padding-bottom:1px;
-  padding-right:3px;
-  text-align:right;
-  width:82px;
-}
-.issue .id .v{
-  display:none;
-}
-.issue .id a{
-  opacity:1.0;
-}
-.issue .editable:hover{
-  background-color:transparent;
-}
-.issue .subject.editable{
-  height:26px;
-  line-height:13px;
-  margin-top:0;
-  overflow:hidden;
-  padding:2px;
-  width:81px;
+
+/* line 200, sass/epicboard.scss */
+#epicboard .placeholder {
+  background-color: #FFFF00;
+  border: 1px dashed #333300;
+  height: 78px;
+  width: 83px;
 }
 
-.issue.closed .subject.editable{
-  text-decoration:line-through;
-}
-.issue .assigned_to_id.editable{
-  font-size:9px;
-  height:10px;
-  margin-top:2px;
-  overflow:hidden;
-  padding:2px;
-  padding-top:0;
-  width:81px;
-  white-space:nowrap;
-}
-.issue .tracker_id.editable{
-  font-size:9px;
-  height:10px;
-  margin-top:2px;
-  overflow:hidden;
-  padding:2px;
-  padding-top:0;
-  width:81px;
-  white-space:nowrap;
-}
-.issue .assigned_to_id .v{
-  display:none;
+/* line 206, sass/epicboard.scss */
+.issue .id {
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  background-color: #FFFFFF;
+  font-size: 9px;
+  height: 12px;
+  opacity: 0.5;
+  overflow: hidden;
+  padding-bottom: 1px;
+  padding-right: 3px;
+  text-align: right;
+  width: 82px;
 }
 
-.issue .tracker_id .v{
-  display:none;
+/* line 220, sass/epicboard.scss */
+.issue .id .v {
+  display: none;
 }
 
-.issue .status_id .v{
-  display:none;
+/* line 223, sass/epicboard.scss */
+.issue .id a {
+  opacity: 1.0;
 }
 
-.issue .priority_id.editable{
-  -moz-border-radius:15px 15px 15px 15px;
-  -webkit-border-radius:15px 15px 15px 15px;
-  border-radius:15px 15px 15px 15px;
-  border:2px solid #FFFFFF;
-  background-color:#0000ee;
-  bottom:10px;
-  color:#FFFFFF;
-  font-size:9px;
-  height:13px;
-  padding-left:5px;
-  padding-right:5px;
-  position:absolute;
-  right:-5px;
+/* line 226, sass/epicboard.scss */
+.issue .editable:hover {
+  background-color: transparent;
 }
 
-.issue .priority_id .v{
-  display:none;
+/* line 229, sass/epicboard.scss */
+.issue .subject.editable {
+  height: 26px;
+  line-height: 13px;
+  margin-top: 0;
+  overflow: hidden;
+  padding: 2px;
+  width: 81px;
 }
 
+/* line 238, sass/epicboard.scss */
+.issue.closed .subject.editable {
+  text-decoration: line-through;
+}
+
+/* line 241, sass/epicboard.scss */
+.issue .assigned_to_id.editable {
+  font-size: 9px;
+  height: 10px;
+  margin-top: 2px;
+  overflow: hidden;
+  padding: 2px;
+  padding-top: 0;
+  width: 81px;
+  white-space: nowrap;
+}
+
+/* line 251, sass/epicboard.scss */
+.issue .tracker_id.editable {
+  font-size: 9px;
+  height: 10px;
+  margin-top: 2px;
+  overflow: hidden;
+  padding: 2px;
+  padding-top: 0;
+  width: 81px;
+  white-space: nowrap;
+}
+
+/* line 261, sass/epicboard.scss */
+.issue .assigned_to_id .v {
+  display: none;
+}
+
+/* line 265, sass/epicboard.scss */
+.issue .tracker_id .v {
+  display: none;
+}
+
+/* line 269, sass/epicboard.scss */
+.issue .status_id .v {
+  display: none;
+}
+
+/* line 273, sass/epicboard.scss */
+.issue .priority_id.editable {
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
+  border: 2px solid #FFFFFF;
+  background-color: #0000ee;
+  bottom: 10px;
+  color: #FFFFFF;
+  font-size: 9px;
+  height: 13px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  right: -5px;
+}
+
+/* line 289, sass/epicboard.scss */
+.issue .priority_id .v {
+  display: none;
+}
+
+/* line 293, sass/epicboard.scss */
 .issue .remaining_hours.editable
-#epicboard .issue .epic_points{
-  -moz-border-radius:15px 15px 15px 15px;
-  -webkit-border-radius:15px 15px 15px 15px;
-  border-radius:15px 15px 15px 15px;
-  border:2px solid #FFFFFF;
-  background-color:#EE0000;
-  bottom:-5px;
-  color:#FFFFFF;
-  font-size:9px;
-  height:13px;
-  padding-left:5px;
-  padding-right:5px;
-  position:absolute;
-  right:-5px;
+#epicboard .issue .epic_points {
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
+  border: 2px solid #FFFFFF;
+  background-color: #EE0000;
+  bottom: -5px;
+  color: #FFFFFF;
+  font-size: 9px;
+  height: 13px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  right: -5px;
 }
-.issue .blocks{
-  display:none;
+
+/* line 309, sass/epicboard.scss */
+.issue .blocks {
+  display: none;
 }
-.issue .remaining_hours.editable:empty{
-  display:none;
+
+/* line 312, sass/epicboard.scss */
+.issue .remaining_hours.editable:empty {
+  display: none;
 }
-.issue .indicator{
-  -moz-border-radius:12px 12px 12px 12px;
-  -webkit-border-radius:12px 12px 12px 12px;
-  border-radius:12px 12px 12px 12px;
-  background-color:#FFFFFF;
-  background-position:center;
-  background-repeat:no-repeat;
-  border:2px solid #000000;
-  display:none;
-  height:16px;
-  left:36px;
-  padding:2px;
-  position:absolute;
-  top:38px;
-  width:16px;
+
+/* line 315, sass/epicboard.scss */
+.issue .indicator {
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border-radius: 12px 12px 12px 12px;
+  background-color: #FFFFFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #000000;
+  display: none;
+  height: 16px;
+  left: 36px;
+  padding: 2px;
+  position: absolute;
+  top: 38px;
+  width: 16px;
 }
-.issue.saving .indicator{
-  background-image:url('images/indicator.gif');
-  display:block;
+
+/* line 331, sass/epicboard.scss */
+.issue.saving .indicator {
+  background-image: url("images/indicator.gif");
+  display: block;
 }
-.issue.error .indicator{
-  background-image:url('images/warning.png');
-  background-position:2px 0;
-  border-color:#CC0000;
-  display:block;
+
+/* line 335, sass/epicboard.scss */
+.issue.error .indicator {
+  background-image: url("images/warning.png");
+  background-position: 2px 0;
+  border-color: #CC0000;
+  display: block;
 }
-.issue .editors{
-  display:none;
+
+/* line 341, sass/epicboard.scss */
+.issue .editors {
+  display: none;
 }
 
 /* dialog */
-.rb_editor_dialog.ui-dialog .ui-dialog-titlebar-close{
-  display:none;
+/* line 346, sass/epicboard.scss */
+.rb_editor_dialog.ui-dialog .ui-dialog-titlebar-close {
+  display: none;
 }
-.rb_editor_dialog.ui-dialog .ui-widget-header{
-  background:none;
-  background-color:#FFFFFF;
-  opacity:0.5;
+
+/* line 349, sass/epicboard.scss */
+.rb_editor_dialog.ui-dialog .ui-widget-header {
+  background: none;
+  background-color: #FFFFFF;
+  opacity: 0.5;
 }
-.rb_editor_dialog.ui-dialog .ui-dialog-title{
-  float:right;
-  margin-right:0;
+
+/* line 354, sass/epicboard.scss */
+.rb_editor_dialog.ui-dialog .ui-dialog-title {
+  float: right;
+  margin-right: 0;
 }
-.rb_editor_dialog.ui-dialog.ui-widget-content{
+
+/* line 358, sass/epicboard.scss */
+.rb_editor_dialog.ui-dialog.ui-widget-content {
   -moz-box-shadow: 2px 2px 5px #777777;
   -webkit-box-shadow: 2px 2px 5px #777777;
   box-shadow: 2px 2px 5px #777777;
-  background:none;
-  border:none;
+  background: none;
+  border: none;
 }
-.rb_editor_dialog.ui-dialog .ui-dialog-buttonpane.ui-widget-content{
-  background:none;
-  background-color:none;
-  border:none;
+
+/* line 365, sass/epicboard.scss */
+.rb_editor_dialog.ui-dialog .ui-dialog-buttonpane.ui-widget-content {
+  background: none;
+  background-color: none;
+  border: none;
 }
 
 /* item editor */
-.rb_editor label{
-  display:block;
-  font-size:11px;
-  text-transform:capitalize;
-  width:100%;
-}
-.rb_editor .editor{
-  font-size:11px;
-  margin-bottom:10px;
-  width:100%;
-}
-.rb_editor .subject{
-  height:65px;
-  width:272px;
+/* line 372, sass/epicboard.scss */
+.rb_editor label {
+  display: block;
+  font-size: 11px;
+  text-transform: capitalize;
+  width: 100%;
 }
 
-.rb_editor .description{
-  height:80px;
-  width:272px;
+/* line 378, sass/epicboard.scss */
+.rb_editor .editor {
+  font-size: 11px;
+  margin-bottom: 10px;
+  width: 100%;
 }
+
+/* line 383, sass/epicboard.scss */
+.rb_editor .subject {
+  height: 65px;
+  width: 272px;
+}
+
+/* line 388, sass/epicboard.scss */
+.rb_editor .description {
+  height: 80px;
+  width: 272px;
+}
+
+/* line 392, sass/epicboard.scss */
 .rb_editor .remaining_hours,
 .rb_editor .time_entry_hours,
 .rb_editor .time_entry_user_id,
 .rb_editor .time_entry_spent_on,
-.rb_editor .blocks{
-  width:268px;
+.rb_editor .blocks {
+  width: 268px;
 }
-.rb_editor .time_entry_comments{
-  height:30px;
-  width:268px;
+
+/* line 399, sass/epicboard.scss */
+.rb_editor .time_entry_comments {
+  height: 30px;
+  width: 268px;
 }
 
 /* others */
+/* line 405, sass/epicboard.scss */
 #impediment_template,
 #story_template,
-#epic_template{
-  display:none;
+#epic_template {
+  display: none;
 }
-#preloader{
-  left:-500px;
-  position:absolute;
+
+/* line 410, sass/epicboard.scss */
+#preloader {
+  left: -500px;
+  position: absolute;
 }
-#spinner{
-  background-image:url('images/indicator.gif');
+
+/* line 414, sass/epicboard.scss */
+#spinner {
+  background-image: url("images/indicator.gif");
 }
-#warning{
-  background-image:url('images/warning.png');
+
+/* line 417, sass/epicboard.scss */
+#warning {
+  background-image: url("images/warning.png");
 }
-#ui-datepicker-div{
+
+/* line 420, sass/epicboard.scss */
+#ui-datepicker-div {
   display: none;
 }
 
 /*epicboard*/
-#epicboard { position: relative; }
-#epicboard #stories { padding-top: 40px; }
-#epicboard .epic .status_id, #epicboard .epic .project { display:none;}
+/* line 425, sass/epicboard.scss */
+#epicboard {
+  position: relative;
+}
 
+/* line 426, sass/epicboard.scss */
+#epicboard #stories {
+  padding-top: 40px;
+}
+
+/* line 427, sass/epicboard.scss */
+#epicboard .epic .status_id, #epicboard .epic .project {
+  display: none;
+}

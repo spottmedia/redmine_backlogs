@@ -1,9 +1,14 @@
-#toolbar .links{
-  display:none !important;
+/* line 1, sass/global_print.scss */
+#toolbar .links {
+  display: none !important;
 }
+
+/* line 4, sass/global_print.scss */
 .add_new {
-    display: none;
+  display: none;
 }
+
+/* line 7, sass/global_print.scss */
 .breadcrumbs select {
-    display: none;
+  display: none;
 }
